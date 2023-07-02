@@ -1,0 +1,165 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Login_Layout.cshtml";
+}
+
+
+<!--background-->
+<h1>College Application Form </h1>
+<div class="register-form-w3layouts">
+    <!-- Form starts here -->
+    <form action="Verify" method="post">
+        <h3 class="sub-heading-agileits">Academic Details</h3>
+        <div class="radio-section">
+            <h6>Student Type</h6>
+            <ul class="radio-buttons-w3-agileits1">
+                <li>
+                    <div class="check"></div>
+                </li>
+                <li>
+                    <input type="radio" id="a-option" name="StudentType" value="New">
+                    <label for="a-option">Incoming 1st Year</label>
+                    <div class="check"></div>
+                </li>
+                <li>
+                    <input type="radio" id="b-option" name="StudentType" value="Transfer">
+                    <label for="b-option">Transferee</label>
+                    <div class="check"></div>
+                </li>
+                <li>
+                    <input type="radio" id="b-option" name="StudentType" value="Old">
+                    <label for="c-option">On-going Student</label>
+                    <div class="check"></div>
+                </li>
+                <li>
+                    <input type="radio" id="b-option" name="StudentType" value="CEP">
+                    <label for="d-option">For CPE Only</label>
+                    <div class="check">
+                        <div class="check"></div>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"></div>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text2">
+            <select class="form-control" name="Course" required="">
+                <option>Select Course</option>
+                <option value="BSEE">Bachelor of Elementary Education</option>
+                <option value="BSSE1">Bachelor of Secondary Education</option>
+                <option value="BSBA">Bachelor of Science in Business Administration</option>
+                <option value="BSCS">Bachelor of Science in Computer Science</option>
+                <option value="BSBA">Bachelor of Science in Business Administration</option>
+                <option value="BSIC">Bachelor of Science in Criminology</option>
+                <option value="BSPC">Bachelor of Science in Psychology</option>
+                <option value="BSIT">Bachelor of Science in Information Technology</option>
+                <option value="BSECE">Bachelor of Science in Early Childhood Education</option>
+                <option value="BSSE2">Bachelor of Science in Special Education</option>
+                <option value="BSST">Bachelor of Science in Tourism</option>
+            </select>
+        </div>
+
+        <h3 class="sub-heading-agileits">Personal Details</h3>
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="LastName" placeholder="Last Name" required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="FirstName" placeholder="First Name" required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="MiddleName" placeholder="Middle Name" required="">
+            </div>
+        </div>
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input id="datepicker" name="Bdate" type="text" placeholder="Birthdate" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}"
+                       required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <select class="form-control" name="Gender" required="">
+                    <option>Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+        </div>
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <select class="form-control" name="CStatus" required="">
+                    <option>Marital Status</option>
+                    <option value="Single">Single</option>
+                    <option value="Married">Married</option>
+                    <option value="Divorced">Divorced</option>
+                </select>
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="Contact" placeholder="Contact" required="">
+            </div>
+        </div>
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="Email" placeholder="Email" required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+            </div>
+        </div>
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="ParentName" placeholder="Parent Name" required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="MaidenName" placeholder="Mother's Maiden Name" required="">
+            </div>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text1">
+            <input type="text" name="Address" placeholder="Address" required="">
+        </div>
+        <div class="clear"></div>
+
+        <h2 class="sub-heading-agileits">In case of Emergency</h2>
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="EmerName" placeholder="Full Name" required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="EmerContact" placeholder="09191234567" required="">
+            </div>
+        </div>
+
+        <h2 class="sub-heading-agileits">Academic Reference</h2>
+        <div class="main-flex-w3ls-sectns">
+            <div class="field-agileinfo-spc form-w3-agile-text1">
+                <input type="text" name="LastSchool" placeholder="Last School Attended" required="">
+            </div>
+            <div class="field-agileinfo-spc form-w3-agile-text2">
+                <input type="text" name="SchoolYr" placeholder="Academic Year" required="">
+            </div>
+        </div>
+        <div class="field-agileinfo-spc form-w3-agile-text1">
+            <input type="text" name="SchoolAddress" placeholder="School Address" required="">
+        </div>
+        <!--<div class="field-agileinfo-spc form-w3-agile-text1">
+            <input type="text" name="Notes" placeholder="Any Note..">
+        </div>-->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear Form">
+        <div class="clear"></div>
+        <br />
+        <a href="~/Preregister/Home"><h2 class="sub-heading-agileits">Home</h2></a>
+    </form>
+    <!--// Form starts here -->
+</div>
+<!--copyright-->
+<div class="copyright">
+</div>
+<!--//copyright-->
+<script type="text/javascript" src="js/jquery-2.2.3.min.js"></script>
+<!-- Calendar Js -->
+<script src="js/jquery-ui.js"></script>
+<script>
+    $(function () {
+        $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
+    });
+</script>
+<!-- //Calendar Js -->
